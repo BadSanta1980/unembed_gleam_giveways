@@ -22,7 +22,7 @@ giveaway.insertBefore(unembedBtn, giveaway.firstChild); //Inserting the button i
 
 // Generating the proper gleam giveaway URL
 var giveawayURL = 'https://gleam.io/' + giveaway.ownerDocument.URL.split(/.*gleam\.io\//)[1].split(/\/.*/)[0] + '/';
-giveawayURL += document.querySelector('h3.ng-binding.ng-scope').innerHTML.replace(/(\'|\*|\!|\.|\,|\(|\))/g, '').toLowerCase();
+giveawayURL += document.querySelector('h3.ng-binding.ng-scope').innerHTML.replace(/(\+|\'|\*|\!|\.|\,|\(|\))/g, '').toLowerCase();
 giveawayURL = giveawayURL.replace(/\s/g, '-');
 
 //Opens the proper giveaway link in a new tab on clicking the button
